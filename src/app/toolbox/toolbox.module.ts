@@ -8,15 +8,17 @@ import { UnionSelectComponent } from './components/union-select/union-select.com
 
 
 @NgModule({
-  declarations: [
-  
-    UnionButtonComponent,
-       UnionInputComponent,
-       UnionCheckboxComponent,
-       UnionSelectComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        UnionButtonComponent,
+        UnionInputComponent,
+        UnionCheckboxComponent,
+        UnionSelectComponent
+    ],
+    exports: [
+        UnionButtonComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class ToolboxModule { }
