@@ -4,6 +4,7 @@ import { UnionButtonComponent } from './components/union-button/union-button.com
 import { UnionInputComponent } from './components/union-input/union-input.component';
 import { UnionCheckboxComponent } from './components/union-checkbox/union-checkbox.component';
 import { UnionSelectComponent } from './components/union-select/union-select.component';
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -18,7 +19,8 @@ import { UnionSelectComponent } from './components/union-select/union-select.com
         UnionButtonComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MatButtonModule
     ]
 })
 export class ToolboxModule { }

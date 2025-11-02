@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/palette';
+
+:host {
+  font-family: 'Momo Trust Display', sans-serif !important;
+}
+body {
+  font-family: 'Momo Trust Display', sans-serif !important;
+  font-weight: 400 !important;
+
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #111827;
+  background-color: #f9fafb;
+}
+
+.mat-typography, .mat-button, button.mat-button, .mat-toolbar, .mat-toolbar-row {
+  font-family: 'Momo Trust Display', sans-serif !important;
+  font-weight: 400 !important;
+}

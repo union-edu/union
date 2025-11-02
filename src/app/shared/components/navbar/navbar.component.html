@@ -1,1 +1,17 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary" class="navbar-toolbar">
+  <a [routerLink]="'/home'" class="logo">Union</a>
+
+  <span class="spacer"></span>
+
+  <union-button
+          label="Login"
+          variant="outline"
+          (clicked)="handleLogin()"
+  ></union-button>
+
+  <union-button
+          label="Register"
+          variant="primary"
+          (clicked)="handleRegister()"
+  ></union-button>
+</mat-toolbar>

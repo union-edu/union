@@ -1,0 +1,70 @@
+@import 'palette.scss';
+
+.navbar-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  background-color: #ffffff; // bianco pulito
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, $primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    cursor: pointer;
+    color: transparent !important;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .spacer {
+    flex-grow: 1;
+  }
+
+  union-button {
+    margin-left: 16px;
+    font-size: 0.95rem;
+
+    button {
+      padding: 0.55rem 1.4rem;
+      border-radius: 32px;
+      font-weight: 600;
+      box-shadow: none;
+      transition: all 0.25s ease;
+
+      &:hover:not(:disabled) {
+        box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // Responsive: adatta padding e spaziatura su schermi piccoli
+  @media (max-width: 600px) {
+    padding: 0 12px;
+
+    app-union-button {
+      margin-left: 8px;
+
+      button {
+        padding: 0.45rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+  }
+}

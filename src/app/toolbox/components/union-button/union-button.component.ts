@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 type ButtonType = 'primary' | 'outline' | 'default';
 
@@ -8,17 +8,15 @@ type ButtonType = 'primary' | 'outline' | 'default';
     styleUrls: ['./union-button.component.scss']
 })
 export class UnionButtonComponent {
-    @Input() type: ButtonType = 'default';
-    @Input() disabled = false;
-    @Input() fullWidth = false;  // opzione per bottone a tutta larghezza
-    @Input() ariaLabel: string = 'button';
+    @Input() label: string = 'Button';
+    @Input() variant: 'primary' | 'outline' = 'primary';
+    @Input() disabled: boolean = false;
 
-    get classes(): string {
-        let base = 'btn';
-        if (this.type === 'primary') base += ' btn-primary';
-        else if (this.type === 'outline') base += ' btn-outline';
-        // 'default' lascia solo btn di base
-        if (this.fullWidth) base += ' full-width';
-        return base;
+    @Output() clicked = new EventEmitter<void>();
+
+    onClick(): void {
+        if (!this.disabled) {
+            this.clicked.emit();
+        }
     }
 }

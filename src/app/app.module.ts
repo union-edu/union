@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import {CoreModule} from "./core/core.module";
 import {ToolboxModule} from "./toolbox/toolbox.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-      FormsModule,
-      CoreModule,
-      ToolboxModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        CoreModule,
+        ToolboxModule,
+        BrowserAnimationsModule,
+        SharedModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

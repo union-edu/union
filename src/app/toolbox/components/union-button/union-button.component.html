@@ -1,8 +1,11 @@
 <button
-        [class]="classes"
-        [disabled]="disabled"
-        [attr.aria-label]="ariaLabel"
-        type="button"
+    mat-button
+    [disabled]="disabled"
+    [ngClass]="{
+        'btn-primary': variant === 'primary',
+        'btn-outline': variant === 'outline'
+    }"
+    (click)="onClick()"
 >
-    <ng-content></ng-content>
+    {{ label }}
 </button>
